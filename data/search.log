@@ -1,0 +1,33 @@
+2026-04-24 10:07:28,085 INFO __main__: === HouseSearch agent starting ===
+2026-04-24 10:07:28,131 WARNING agent.scrapers.zimmo: [zimmo] HTTP 403 for boortmeerbeek
+2026-04-24 10:07:30,166 WARNING agent.scrapers.zimmo: [zimmo] HTTP 403 for hever
+2026-04-24 10:07:32,193 WARNING agent.scrapers.zimmo: [zimmo] HTTP 403 for steenokkerzeel
+2026-04-24 10:07:34,231 WARNING agent.scrapers.zimmo: [zimmo] HTTP 403 for haacht
+2026-04-24 10:07:36,258 WARNING agent.scrapers.zimmo: [zimmo] HTTP 403 for zemst
+2026-04-24 10:07:38,286 WARNING agent.scrapers.zimmo: [zimmo] HTTP 403 for kortenberg
+2026-04-24 10:07:40,311 WARNING agent.scrapers.zimmo: [zimmo] HTTP 403 for mechelen
+2026-04-24 10:07:42,312 INFO agent.scraper_base: [zimmo] scraped 0 listings
+2026-04-24 10:07:42,522 WARNING agent.scrapers.logic_immo: [logic-immo] HTTP {resp.status_code} for {postal}
+2026-04-24 10:07:44,576 WARNING agent.scrapers.logic_immo: [logic-immo] HTTP {resp.status_code} for {postal}
+2026-04-24 10:07:46,644 WARNING agent.scrapers.logic_immo: [logic-immo] HTTP {resp.status_code} for {postal}
+2026-04-24 10:07:48,701 WARNING agent.scrapers.logic_immo: [logic-immo] HTTP {resp.status_code} for {postal}
+2026-04-24 10:07:50,764 WARNING agent.scrapers.logic_immo: [logic-immo] HTTP {resp.status_code} for {postal}
+2026-04-24 10:07:52,817 WARNING agent.scrapers.logic_immo: [logic-immo] HTTP {resp.status_code} for {postal}
+2026-04-24 10:07:54,877 WARNING agent.scrapers.logic_immo: [logic-immo] HTTP {resp.status_code} for {postal}
+2026-04-24 10:07:56,878 INFO agent.scraper_base: [logic-immo] scraped 0 listings
+2026-04-24 10:08:24,432 INFO agent.scrapers.local_agencies: [heylen] 786 total listings
+2026-04-24 10:08:24,433 INFO agent.scraper_base: [heylen] scraped 786 listings
+2026-04-24 10:08:26,315 WARNING agent.scrapers.local_agencies: [dewaele] HTTP 404 for 3190
+2026-04-24 10:08:28,080 WARNING agent.scrapers.local_agencies: [dewaele] HTTP 404 for 3191
+2026-04-24 10:08:29,802 WARNING agent.scrapers.local_agencies: [dewaele] HTTP 404 for 1820
+2026-04-24 10:08:31,545 WARNING agent.scrapers.local_agencies: [dewaele] HTTP 404 for 3150
+2026-04-24 10:08:33,429 WARNING agent.scrapers.local_agencies: [dewaele] HTTP 404 for 1980
+2026-04-24 10:08:35,222 WARNING agent.scrapers.local_agencies: [dewaele] HTTP 404 for 3070
+2026-04-24 10:08:36,993 WARNING agent.scrapers.local_agencies: [dewaele] HTTP 404 for 2800
+2026-04-24 10:08:36,993 INFO agent.scrapers.local_agencies: [dewaele] 0 total listings
+2026-04-24 10:08:36,994 INFO agent.scraper_base: [dewaele] scraped 0 listings
+2026-04-24 10:08:36,995 INFO __main__: 0 listings pass filters (out of 786 raw)
+2026-04-24 10:08:36,995 INFO agent.deduplication: 0 new listings out of 0 total
+2026-04-24 10:08:36,995 INFO agent.deduplication: Saved 0 seen listing IDs
+2026-04-24 10:08:36,995 INFO __main__: Reports saved: report_2026-04-24.json, report_2026-04-24.html
+2026-04-24 10:08:36,995 INFO __main__: === HouseSearch agent done: 0 new listings ===
