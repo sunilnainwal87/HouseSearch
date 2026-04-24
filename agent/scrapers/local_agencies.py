@@ -42,7 +42,7 @@ class HeylenScraper(BaseScraper):
                     if href and not href.startswith("http"):
                         href = "https://www.heylen.be" + href
                     listing["url"] = href
-                    listing["id"] = f"heylen_{re.sub(r'[^a-zA-Z0-9]', '_', href)[-60:]}'"
+                    listing["id"] = f"heylen_{re.sub(r'[^a-zA-Z0-9]', '_', href)[-60:]}"
                     price_el = card.select_one(".price, [class*='price']")
                     if price_el:
                         digits = re.sub(r"[^0-9]", "", price_el.get_text())
@@ -50,7 +50,8 @@ class HeylenScraper(BaseScraper):
                     title_el = card.select_one("h2, h3, [class*='title']")
                     listing["title"] = title_el.get_text(strip=True) if title_el else ""
                     desc = card.get_text(separator=" ", strip=True).lower()
-                    listing["has_garden"] = any(w in desc for w in ["tuin", "garden", "jardin"])
+                    if any(w in desc for w in ["tuin", "garden", "jardin"]):
+                        listing["has_garden"] = True
                     listings.append(listing)
                 time.sleep(1.5)
             except Exception as e:
@@ -66,7 +67,7 @@ class DewaeleScraper(BaseScraper):
     def _scrape(self) -> list:
         listings = []
         for postal in self.POSTALS:
-            url = f"https://www.dewaele.com/nl/te-koop/huis?maxPrice={FILTERS['max_price']}&postalCode={postal}"
+            url = f"https://www.dewaele.com/nl/te-koop?types=huis&maxPrice={FILTERS['max_price']}&q={postal}"
             try:
                 resp = requests.get(url, headers=HEADERS, timeout=20)
                 if not resp.ok:
@@ -84,7 +85,7 @@ class DewaeleScraper(BaseScraper):
                     if href and not href.startswith("http"):
                         href = "https://www.dewaele.com" + href
                     listing["url"] = href
-                    listing["id"] = f"dewaele_{re.sub(r'[^a-zA-Z0-9]', '_', href)[-60:]}'"
+                    listing["id"] = f"dewaele_{re.sub(r'[^a-zA-Z0-9]', '_', href)[-60:]}"
                     price_el = card.select_one(".price, [class*='price']")
                     if price_el:
                         digits = re.sub(r"[^0-9]", "", price_el.get_text())

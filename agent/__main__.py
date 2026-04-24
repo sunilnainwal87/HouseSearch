@@ -61,8 +61,26 @@ def send_telegram(listing: dict) -> None:
         logger.error("Telegram send failed: %s", exc)
 
 
-# ---------------------------------------------------------------------------
-# Report generation
+def send_telegram_summary(new_count: int, total_count: int) -> None:
+    if not TELEGRAM_BOT_TOKEN or not TELEGRAM_CHAT_ID:
+        return
+    text = (
+        f"📊 *Daily HouseSearch summary*\n"
+        f"🔍 {total_count} listings matched filters\n"
+        f"🆕 {new_count} new listings{'!' if new_count else ' (none new today)'}"
+    )
+    try:
+        resp = requests.post(
+            f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage",
+            json={"chat_id": TELEGRAM_CHAT_ID, "text": text, "parse_mode": "Markdown"},
+            timeout=15,
+        )
+        if not resp.ok:
+            logger.warning("Telegram summary error: %s", resp.text)
+    except Exception as exc:
+        logger.error("Telegram summary send failed: %s", exc)
+
+
 # ---------------------------------------------------------------------------
 def save_report(listings: list, all_listings: list) -> None:
     today = datetime.date.today().isoformat()
@@ -129,6 +147,7 @@ def main() -> None:
     # Notifications
     for listing in new_listings:
         send_telegram(listing)
+    send_telegram_summary(len(new_listings), len(filtered))
 
     # Persist
     new_ids = {l["id"] for l in new_listings if l.get("id")}

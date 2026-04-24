@@ -54,7 +54,7 @@ class ZimmoScraper(BaseScraper):
                 if href and not href.startswith("http"):
                     href = "https://www.zimmo.be" + href
                 listing["url"] = href
-                listing["id"] = f"zimmo_{re.sub(r'[^a-zA-Z0-9]', '_', href)[-60:]}'"
+                listing["id"] = f"zimmo_{re.sub(r'[^a-zA-Z0-9]', '_', href)[-60:]}"
                 price_el = card.select_one(".price, .c-price, [class*='price']")
                 listing["price"] = parse_price(price_el.get_text()) if price_el else None
                 beds_el = card.select_one("[class*='bedroom'], [class*='bed']")
@@ -68,7 +68,8 @@ class ZimmoScraper(BaseScraper):
                 title_el = card.select_one("h2, h3, .title, [class*='title']")
                 listing["title"] = title_el.get_text(strip=True) if title_el else ""
                 desc = card.get_text(separator=" ", strip=True).lower()
-                listing["has_garden"] = any(w in desc for w in ["tuin", "garden", "jardin"])
+                if any(w in desc for w in ["tuin", "garden", "jardin"]):
+                    listing["has_garden"] = True
                 img = card.select_one("img")
                 if img and img.get("src"):
                     listing["images"] = [img["src"]]
