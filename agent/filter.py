@@ -21,10 +21,11 @@ def passes_filters(listing: dict, filters: dict) -> bool:
     # --- Garden ---
     if filters.get("require_garden"):
         has_garden = listing.get("has_garden")
-        if not has_garden:
+        if has_garden is False:
             text = (listing.get("description", "") + " " + listing.get("title", "")).lower()
             if not any(kw in text for kw in GARDEN_KEYWORDS):
                 return False
+        # None = unknown (card preview lacked enough detail) → include for manual review
 
     # --- EPC (if known, must be A/B/C) ---
     epc = (listing.get("epc") or "").strip().upper()

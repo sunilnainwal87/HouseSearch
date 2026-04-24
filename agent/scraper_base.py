@@ -15,7 +15,7 @@ def empty_listing() -> dict:
         "description": "",
         "price": None,
         "bedrooms": None,
-        "has_garden": False,
+        "has_garden": None,
         "epc": None,
         "municipality": None,
         "postal_code": None,
