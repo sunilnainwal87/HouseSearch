@@ -24400,3 +24400,51 @@ requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='www.dewaele.com', 
 2026-06-28 07:19:43,046 INFO agent.deduplication: Saved 2103 seen listing IDs
 2026-06-28 07:19:43,057 INFO __main__: Reports saved: report_2026-06-28.json, report_2026-06-28.html
 2026-06-28 07:19:43,057 INFO __main__: === HouseSearch agent done: 66 new listings ===
+2026-06-29 07:36:41,059 INFO __main__: === HouseSearch agent starting ===
+2026-06-29 07:36:41,204 WARNING agent.scrapers.zimmo: [zimmo] HTTP 403 for boortmeerbeek
+2026-06-29 07:36:43,238 WARNING agent.scrapers.zimmo: [zimmo] HTTP 403 for hever
+2026-06-29 07:36:45,275 WARNING agent.scrapers.zimmo: [zimmo] HTTP 403 for steenokkerzeel
+2026-06-29 07:36:47,311 WARNING agent.scrapers.zimmo: [zimmo] HTTP 403 for haacht
+2026-06-29 07:36:49,343 WARNING agent.scrapers.zimmo: [zimmo] HTTP 403 for zemst
+2026-06-29 07:36:51,377 WARNING agent.scrapers.zimmo: [zimmo] HTTP 403 for kortenberg
+2026-06-29 07:36:53,409 WARNING agent.scrapers.zimmo: [zimmo] HTTP 403 for mechelen
+2026-06-29 07:36:55,410 INFO agent.scraper_base: [zimmo] scraped 0 listings
+2026-06-29 07:36:55,587 WARNING agent.scrapers.logic_immo: [logic-immo] HTTP 403 for 3190
+2026-06-29 07:36:57,655 WARNING agent.scrapers.logic_immo: [logic-immo] HTTP 403 for 3191
+2026-06-29 07:36:59,721 WARNING agent.scrapers.logic_immo: [logic-immo] HTTP 403 for 1820
+2026-06-29 07:37:01,787 WARNING agent.scrapers.logic_immo: [logic-immo] HTTP 403 for 3150
+2026-06-29 07:37:03,849 WARNING agent.scrapers.logic_immo: [logic-immo] HTTP 403 for 1980
+2026-06-29 07:37:05,921 WARNING agent.scrapers.logic_immo: [logic-immo] HTTP 403 for 3070
+2026-06-29 07:37:07,986 WARNING agent.scrapers.logic_immo: [logic-immo] HTTP 403 for 2800
+2026-06-29 07:37:09,988 INFO agent.scraper_base: [logic-immo] scraped 0 listings
+2026-06-29 07:37:34,925 INFO agent.scrapers.local_agencies: [heylen] 2097 total listings
+2026-06-29 07:37:34,927 INFO agent.scraper_base: [heylen] scraped 2097 listings
+2026-06-29 07:37:55,122 INFO agent.scrapers.local_agencies: [dewaele] 791 total listings
+2026-06-29 07:37:55,123 INFO agent.scraper_base: [dewaele] scraped 791 listings
+2026-06-29 07:37:55,124 INFO __main__: 2888 listings pass filters (out of 2888 raw)
+2026-06-29 07:37:55,125 INFO agent.deduplication: 21 new listings out of 2888 total
+2026-06-29 07:37:55,504 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-06-29 07:37:55,831 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-06-29 07:37:56,143 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-06-29 07:37:56,471 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-06-29 07:37:56,796 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-06-29 07:37:57,124 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-06-29 07:37:57,438 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-06-29 07:37:57,754 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-06-29 07:37:58,078 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-06-29 07:37:58,399 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-06-29 07:37:58,721 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-06-29 07:37:59,047 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-06-29 07:37:59,377 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-06-29 07:37:59,702 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-06-29 07:38:00,027 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-06-29 07:38:00,350 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-06-29 07:38:00,673 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-06-29 07:38:01,003 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-06-29 07:38:01,322 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-06-29 07:38:01,647 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-06-29 07:38:01,981 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-06-29 07:38:02,295 WARNING __main__: Telegram summary error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-06-29 07:38:02,298 INFO agent.deduplication: Saved 2107 seen listing IDs
+2026-06-29 07:38:02,304 INFO __main__: Reports saved: report_2026-06-29.json, report_2026-06-29.html
+2026-06-29 07:38:02,304 INFO __main__: === HouseSearch agent done: 21 new listings ===
