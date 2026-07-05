@@ -26172,3 +26172,100 @@ requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='www.dewaele.com', 
 2026-07-04 07:01:33,753 INFO agent.deduplication: Saved 2279 seen listing IDs
 2026-07-04 07:01:33,781 INFO __main__: Reports saved: report_2026-07-04.json, report_2026-07-04.html
 2026-07-04 07:01:33,781 INFO __main__: === HouseSearch agent done: 254 new listings ===
+2026-07-05 07:03:36,875 INFO __main__: === HouseSearch agent starting ===
+2026-07-05 07:03:37,203 WARNING agent.scrapers.zimmo: [zimmo] HTTP 403 for boortmeerbeek
+2026-07-05 07:03:39,269 WARNING agent.scrapers.zimmo: [zimmo] HTTP 403 for hever
+2026-07-05 07:03:41,316 WARNING agent.scrapers.zimmo: [zimmo] HTTP 403 for steenokkerzeel
+2026-07-05 07:03:43,367 WARNING agent.scrapers.zimmo: [zimmo] HTTP 403 for haacht
+2026-07-05 07:03:45,410 WARNING agent.scrapers.zimmo: [zimmo] HTTP 403 for zemst
+2026-07-05 07:03:47,452 WARNING agent.scrapers.zimmo: [zimmo] HTTP 403 for kortenberg
+2026-07-05 07:03:49,494 WARNING agent.scrapers.zimmo: [zimmo] HTTP 403 for mechelen
+2026-07-05 07:03:51,495 INFO agent.scraper_base: [zimmo] scraped 0 listings
+2026-07-05 07:03:51,694 WARNING agent.scrapers.logic_immo: [logic-immo] HTTP 403 for 3190
+2026-07-05 07:03:53,777 WARNING agent.scrapers.logic_immo: [logic-immo] HTTP 403 for 3191
+2026-07-05 07:03:55,862 WARNING agent.scrapers.logic_immo: [logic-immo] HTTP 403 for 1820
+2026-07-05 07:03:57,948 WARNING agent.scrapers.logic_immo: [logic-immo] HTTP 403 for 3150
+2026-07-05 07:04:00,038 WARNING agent.scrapers.logic_immo: [logic-immo] HTTP 403 for 1980
+2026-07-05 07:04:02,124 WARNING agent.scrapers.logic_immo: [logic-immo] HTTP 403 for 3070
+2026-07-05 07:04:04,225 WARNING agent.scrapers.logic_immo: [logic-immo] HTTP 403 for 2800
+2026-07-05 07:04:06,226 INFO agent.scraper_base: [logic-immo] scraped 0 listings
+2026-07-05 07:04:33,796 ERROR agent.scrapers.local_agencies: [heylen] error for kortenberg: HTTPSConnectionPool(host='www.heylen.be', port=443): Max retries exceeded with url: /nl/te-koop?type=huis&regio=kortenberg&maxprijs=560000 (Caused by SSLError(SSLError(1, '[SSL: DECRYPTION_FAILED_OR_BAD_RECORD_MAC] decryption failed or bad record mac (_ssl.c:2590)')))
+urllib3.exceptions.SSLError: [SSL: DECRYPTION_FAILED_OR_BAD_RECORD_MAC] decryption failed or bad record mac (_ssl.c:2590)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/requests/adapters.py", line 696, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/urllib3/connectionpool.py", line 842, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/urllib3/util/retry.py", line 543, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='www.heylen.be', port=443): Max retries exceeded with url: /nl/te-koop?type=huis&regio=kortenberg&maxprijs=560000 (Caused by SSLError(SSLError(1, '[SSL: DECRYPTION_FAILED_OR_BAD_RECORD_MAC] decryption failed or bad record mac (_ssl.c:2590)')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/runner/work/HouseSearch/HouseSearch/agent/scrapers/local_agencies.py", line 29, in _scrape
+    resp = requests.get(url, headers=HEADERS, timeout=20)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/requests/api.py", line 87, in get
+    return request("get", url, params=params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/requests/api.py", line 71, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/requests/sessions.py", line 651, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/requests/sessions.py", line 784, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/requests/adapters.py", line 727, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: HTTPSConnectionPool(host='www.heylen.be', port=443): Max retries exceeded with url: /nl/te-koop?type=huis&regio=kortenberg&maxprijs=560000 (Caused by SSLError(SSLError(1, '[SSL: DECRYPTION_FAILED_OR_BAD_RECORD_MAC] decryption failed or bad record mac (_ssl.c:2590)')))
+2026-07-05 07:04:40,250 INFO agent.scrapers.local_agencies: [heylen] 1725 total listings
+2026-07-05 07:04:40,252 INFO agent.scraper_base: [heylen] scraped 1725 listings
+2026-07-05 07:04:59,033 INFO agent.scrapers.local_agencies: [dewaele] 784 total listings
+2026-07-05 07:04:59,034 INFO agent.scraper_base: [dewaele] scraped 784 listings
+2026-07-05 07:04:59,036 INFO __main__: 2509 listings pass filters (out of 2509 raw)
+2026-07-05 07:04:59,037 INFO agent.deduplication: 32 new listings out of 2509 total
+2026-07-05 07:04:59,385 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-07-05 07:04:59,673 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-07-05 07:04:59,977 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-07-05 07:05:00,270 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-07-05 07:05:00,566 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-07-05 07:05:00,858 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-07-05 07:05:01,156 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-07-05 07:05:01,444 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-07-05 07:05:01,735 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-07-05 07:05:02,036 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-07-05 07:05:02,327 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-07-05 07:05:02,615 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-07-05 07:05:02,912 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-07-05 07:05:03,198 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-07-05 07:05:03,498 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-07-05 07:05:03,784 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-07-05 07:05:04,075 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-07-05 07:05:04,368 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-07-05 07:05:04,657 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-07-05 07:05:04,953 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-07-05 07:05:05,240 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-07-05 07:05:05,530 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-07-05 07:05:05,831 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-07-05 07:05:06,140 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-07-05 07:05:06,431 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-07-05 07:05:06,724 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-07-05 07:05:07,010 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-07-05 07:05:07,299 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-07-05 07:05:07,591 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-07-05 07:05:07,888 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-07-05 07:05:08,178 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-07-05 07:05:08,468 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-07-05 07:05:08,756 WARNING __main__: Telegram summary error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-07-05 07:05:08,759 INFO agent.deduplication: Saved 2285 seen listing IDs
+2026-07-05 07:05:08,765 INFO __main__: Reports saved: report_2026-07-05.json, report_2026-07-05.html
+2026-07-05 07:05:08,766 INFO __main__: === HouseSearch agent done: 32 new listings ===
