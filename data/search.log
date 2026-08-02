@@ -33855,3 +33855,121 @@ requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='www.heylen.be', po
 2026-08-01 06:51:34,798 INFO agent.deduplication: Saved 2864 seen listing IDs
 2026-08-01 06:51:34,803 INFO __main__: Reports saved: report_2026-08-01.json, report_2026-08-01.html
 2026-08-01 06:51:34,803 INFO __main__: === HouseSearch agent done: 91 new listings ===
+2026-08-02 06:50:43,851 INFO __main__: === HouseSearch agent starting ===
+2026-08-02 06:50:44,096 WARNING agent.scrapers.zimmo: [zimmo] HTTP 403 for boortmeerbeek
+2026-08-02 06:50:46,132 WARNING agent.scrapers.zimmo: [zimmo] HTTP 403 for hever
+2026-08-02 06:50:48,168 WARNING agent.scrapers.zimmo: [zimmo] HTTP 403 for steenokkerzeel
+2026-08-02 06:50:50,200 WARNING agent.scrapers.zimmo: [zimmo] HTTP 403 for haacht
+2026-08-02 06:50:52,238 WARNING agent.scrapers.zimmo: [zimmo] HTTP 403 for zemst
+2026-08-02 06:50:54,268 WARNING agent.scrapers.zimmo: [zimmo] HTTP 403 for kortenberg
+2026-08-02 06:50:56,302 WARNING agent.scrapers.zimmo: [zimmo] HTTP 403 for mechelen
+2026-08-02 06:50:58,303 INFO agent.scraper_base: [zimmo] scraped 0 listings
+2026-08-02 06:50:58,484 WARNING agent.scrapers.logic_immo: [logic-immo] HTTP 403 for 3190
+2026-08-02 06:51:00,551 WARNING agent.scrapers.logic_immo: [logic-immo] HTTP 403 for 3191
+2026-08-02 06:51:02,618 WARNING agent.scrapers.logic_immo: [logic-immo] HTTP 403 for 1820
+2026-08-02 06:51:04,687 WARNING agent.scrapers.logic_immo: [logic-immo] HTTP 403 for 3150
+2026-08-02 06:51:06,751 WARNING agent.scrapers.logic_immo: [logic-immo] HTTP 403 for 1980
+2026-08-02 06:51:08,815 WARNING agent.scrapers.logic_immo: [logic-immo] HTTP 403 for 3070
+2026-08-02 06:51:10,882 WARNING agent.scrapers.logic_immo: [logic-immo] HTTP 403 for 2800
+2026-08-02 06:51:12,883 INFO agent.scraper_base: [logic-immo] scraped 0 listings
+2026-08-02 06:51:34,730 INFO agent.scrapers.local_agencies: [heylen] 2136 total listings
+2026-08-02 06:51:34,732 INFO agent.scraper_base: [heylen] scraped 2136 listings
+2026-08-02 06:51:54,828 INFO agent.scrapers.local_agencies: [dewaele] 819 total listings
+2026-08-02 06:51:54,829 INFO agent.scraper_base: [dewaele] scraped 819 listings
+2026-08-02 06:51:54,830 INFO __main__: 2955 listings pass filters (out of 2955 raw)
+2026-08-02 06:51:54,831 INFO agent.deduplication: 91 new listings out of 2955 total
+2026-08-02 06:51:55,112 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-08-02 06:51:55,391 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-08-02 06:51:55,670 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-08-02 06:51:55,964 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-08-02 06:51:56,247 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-08-02 06:51:56,533 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-08-02 06:51:56,829 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-08-02 06:51:57,107 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-08-02 06:51:57,390 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-08-02 06:51:57,684 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-08-02 06:51:57,961 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-08-02 06:51:58,254 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-08-02 06:51:58,531 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-08-02 06:51:58,824 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-08-02 06:51:59,101 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-08-02 06:51:59,390 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-08-02 06:51:59,673 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-08-02 06:51:59,952 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-08-02 06:52:00,227 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-08-02 06:52:00,515 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-08-02 06:52:00,809 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-08-02 06:52:01,084 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-08-02 06:52:01,364 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-08-02 06:52:01,640 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-08-02 06:52:01,924 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-08-02 06:52:02,218 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-08-02 06:52:02,502 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-08-02 06:52:02,787 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-08-02 06:52:03,084 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-08-02 06:52:03,368 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-08-02 06:52:03,653 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-08-02 06:52:03,946 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-08-02 06:52:04,223 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-08-02 06:52:04,517 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-08-02 06:52:04,793 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-08-02 06:52:05,077 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-08-02 06:52:05,356 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-08-02 06:52:05,640 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-08-02 06:52:05,932 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-08-02 06:52:06,213 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-08-02 06:52:06,489 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-08-02 06:52:06,775 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-08-02 06:52:07,070 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-08-02 06:52:07,348 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-08-02 06:52:07,623 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-08-02 06:52:07,901 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-08-02 06:52:08,178 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-08-02 06:52:08,472 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-08-02 06:52:08,757 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-08-02 06:52:09,046 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-08-02 06:52:09,341 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-08-02 06:52:09,623 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-08-02 06:52:09,912 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-08-02 06:52:10,205 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-08-02 06:52:10,484 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-08-02 06:52:10,779 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-08-02 06:52:11,057 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-08-02 06:52:11,340 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-08-02 06:52:11,625 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-08-02 06:52:11,909 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-08-02 06:52:12,192 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-08-02 06:52:12,472 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-08-02 06:52:12,748 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-08-02 06:52:13,035 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-08-02 06:52:13,311 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-08-02 06:52:13,609 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-08-02 06:52:13,886 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-08-02 06:52:14,161 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-08-02 06:52:14,454 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-08-02 06:52:14,740 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-08-02 06:52:15,028 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-08-02 06:52:15,322 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-08-02 06:52:15,599 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-08-02 06:52:15,879 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-08-02 06:52:16,163 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-08-02 06:52:16,456 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-08-02 06:52:16,734 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-08-02 06:52:17,028 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-08-02 06:52:17,304 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-08-02 06:52:17,590 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-08-02 06:52:17,871 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-08-02 06:52:18,154 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-08-02 06:52:18,442 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-08-02 06:52:18,724 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-08-02 06:52:18,999 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-08-02 06:52:19,277 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-08-02 06:52:19,563 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-08-02 06:52:19,842 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-08-02 06:52:20,136 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-08-02 06:52:20,431 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-08-02 06:52:20,717 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-08-02 06:52:21,000 WARNING __main__: Telegram summary error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-08-02 06:52:21,004 INFO agent.deduplication: Saved 2879 seen listing IDs
+2026-08-02 06:52:21,018 INFO __main__: Reports saved: report_2026-08-02.json, report_2026-08-02.html
+2026-08-02 06:52:21,018 INFO __main__: === HouseSearch agent done: 91 new listings ===
