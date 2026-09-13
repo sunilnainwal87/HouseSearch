@@ -44789,3 +44789,30 @@ requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='www.heylen.be', po
 2026-09-12 09:51:33,919 INFO agent.deduplication: Saved 3874 seen listing IDs
 2026-09-12 09:51:33,941 INFO __main__: Reports saved: report_2026-09-12.json, report_2026-09-12.html
 2026-09-12 09:51:33,941 INFO __main__: === HouseSearch agent done: 165 new listings ===
+2026-09-13 10:49:40,315 INFO __main__: === HouseSearch agent starting ===
+2026-09-13 10:49:40,573 WARNING agent.scrapers.zimmo: [zimmo] HTTP 403 for boortmeerbeek
+2026-09-13 10:49:42,627 WARNING agent.scrapers.zimmo: [zimmo] HTTP 403 for hever
+2026-09-13 10:49:44,672 WARNING agent.scrapers.zimmo: [zimmo] HTTP 403 for steenokkerzeel
+2026-09-13 10:49:46,719 WARNING agent.scrapers.zimmo: [zimmo] HTTP 403 for haacht
+2026-09-13 10:49:48,762 WARNING agent.scrapers.zimmo: [zimmo] HTTP 403 for zemst
+2026-09-13 10:49:50,805 WARNING agent.scrapers.zimmo: [zimmo] HTTP 403 for kortenberg
+2026-09-13 10:49:52,852 WARNING agent.scrapers.zimmo: [zimmo] HTTP 403 for mechelen
+2026-09-13 10:49:54,853 INFO agent.scraper_base: [zimmo] scraped 0 listings
+2026-09-13 10:49:55,042 WARNING agent.scrapers.logic_immo: [logic-immo] HTTP 403 for 3190
+2026-09-13 10:49:57,138 WARNING agent.scrapers.logic_immo: [logic-immo] HTTP 403 for 3191
+2026-09-13 10:49:59,227 WARNING agent.scrapers.logic_immo: [logic-immo] HTTP 403 for 1820
+2026-09-13 10:50:01,327 WARNING agent.scrapers.logic_immo: [logic-immo] HTTP 403 for 3150
+2026-09-13 10:50:03,419 WARNING agent.scrapers.logic_immo: [logic-immo] HTTP 403 for 1980
+2026-09-13 10:50:05,509 WARNING agent.scrapers.logic_immo: [logic-immo] HTTP 403 for 3070
+2026-09-13 10:50:07,598 WARNING agent.scrapers.logic_immo: [logic-immo] HTTP 403 for 2800
+2026-09-13 10:50:09,600 INFO agent.scraper_base: [logic-immo] scraped 0 listings
+2026-09-13 10:50:50,400 INFO agent.scrapers.local_agencies: [heylen] 2172 total listings
+2026-09-13 10:50:50,403 INFO agent.scraper_base: [heylen] scraped 2172 listings
+2026-09-13 10:51:24,285 INFO agent.scrapers.local_agencies: [dewaele] 819 total listings
+2026-09-13 10:51:24,287 INFO agent.scraper_base: [dewaele] scraped 819 listings
+2026-09-13 10:51:24,288 INFO __main__: 2991 listings pass filters (out of 2991 raw)
+2026-09-13 10:51:24,289 INFO agent.deduplication: 0 new listings out of 2991 total
+2026-09-13 10:51:24,596 WARNING __main__: Telegram summary error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-13 10:51:24,600 INFO agent.deduplication: Saved 3874 seen listing IDs
+2026-09-13 10:51:24,605 INFO __main__: Reports saved: report_2026-09-13.json, report_2026-09-13.html
+2026-09-13 10:51:24,605 INFO __main__: === HouseSearch agent done: 0 new listings ===
