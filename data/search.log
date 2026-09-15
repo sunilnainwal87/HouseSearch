@@ -45303,3 +45303,669 @@ requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='www.heylen.be', po
 2026-09-14 11:21:19,859 INFO agent.deduplication: Saved 3884 seen listing IDs
 2026-09-14 11:21:19,863 INFO __main__: Reports saved: report_2026-09-14.json, report_2026-09-14.html
 2026-09-14 11:21:19,863 INFO __main__: === HouseSearch agent done: 70 new listings ===
+2026-09-15 10:42:56,943 INFO __main__: === HouseSearch agent starting ===
+2026-09-15 10:42:57,018 WARNING agent.scrapers.zimmo: [zimmo] HTTP 403 for boortmeerbeek
+2026-09-15 10:42:59,071 WARNING agent.scrapers.zimmo: [zimmo] HTTP 403 for hever
+2026-09-15 10:43:01,136 WARNING agent.scrapers.zimmo: [zimmo] HTTP 403 for steenokkerzeel
+2026-09-15 10:43:03,195 WARNING agent.scrapers.zimmo: [zimmo] HTTP 403 for haacht
+2026-09-15 10:43:05,245 WARNING agent.scrapers.zimmo: [zimmo] HTTP 403 for zemst
+2026-09-15 10:43:07,295 WARNING agent.scrapers.zimmo: [zimmo] HTTP 403 for kortenberg
+2026-09-15 10:43:09,353 WARNING agent.scrapers.zimmo: [zimmo] HTTP 403 for mechelen
+2026-09-15 10:43:11,353 INFO agent.scraper_base: [zimmo] scraped 0 listings
+2026-09-15 10:43:11,605 WARNING agent.scrapers.logic_immo: [logic-immo] HTTP 403 for 3190
+2026-09-15 10:43:13,702 WARNING agent.scrapers.logic_immo: [logic-immo] HTTP 403 for 3191
+2026-09-15 10:43:15,838 WARNING agent.scrapers.logic_immo: [logic-immo] HTTP 403 for 1820
+2026-09-15 10:43:17,944 WARNING agent.scrapers.logic_immo: [logic-immo] HTTP 403 for 3150
+2026-09-15 10:43:20,039 WARNING agent.scrapers.logic_immo: [logic-immo] HTTP 403 for 1980
+2026-09-15 10:43:22,145 WARNING agent.scrapers.logic_immo: [logic-immo] HTTP 403 for 3070
+2026-09-15 10:43:24,247 WARNING agent.scrapers.logic_immo: [logic-immo] HTTP 403 for 2800
+2026-09-15 10:43:26,248 INFO agent.scraper_base: [logic-immo] scraped 0 listings
+2026-09-15 10:43:49,045 ERROR agent.scrapers.local_agencies: [heylen] error for boortmeerbeek: HTTPSConnectionPool(host='www.heylenvastgoed.be', port=443): Read timed out. (read timeout=20)
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/urllib3/connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/urllib3/connectionpool.py", line 1106, in _validate_conn
+    conn.connect()
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/urllib3/connection.py", line 796, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/urllib3/connection.py", line 975, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+               ^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/urllib3/util/ssl_.py", line 433, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/urllib3/util/ssl_.py", line 477, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/ssl.py", line 517, in wrap_socket
+    return self.sslsocket_class._create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/ssl.py", line 1104, in _create
+    self.do_handshake()
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/ssl.py", line 1382, in do_handshake
+    self._sslobj.do_handshake()
+TimeoutError: _ssl.c:999: The handshake operation timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/requests/adapters.py", line 696, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/urllib3/connectionpool.py", line 842, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/urllib3/util/retry.py", line 498, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/urllib3/util/util.py", line 39, in reraise
+    raise value
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/urllib3/connectionpool.py", line 788, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/urllib3/connectionpool.py", line 488, in _make_request
+    raise new_e
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/urllib3/connectionpool.py", line 466, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=conn.timeout)
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/urllib3/connectionpool.py", line 367, in _raise_timeout
+    raise ReadTimeoutError(
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='www.heylenvastgoed.be', port=443): Read timed out. (read timeout=20)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/runner/work/HouseSearch/HouseSearch/agent/scrapers/local_agencies.py", line 29, in _scrape
+    resp = requests.get(url, headers=HEADERS, timeout=20)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/requests/api.py", line 87, in get
+    return request("get", url, params=params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/requests/api.py", line 71, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/requests/sessions.py", line 651, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/requests/sessions.py", line 805, in send
+    history = [resp for resp in gen]
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/requests/sessions.py", line 805, in <listcomp>
+    history = [resp for resp in gen]
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/requests/sessions.py", line 292, in resolve_redirects
+    resp = self.send(
+           ^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/requests/sessions.py", line 784, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/requests/adapters.py", line 742, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: HTTPSConnectionPool(host='www.heylenvastgoed.be', port=443): Read timed out. (read timeout=20)
+2026-09-15 10:44:11,275 ERROR agent.scrapers.local_agencies: [heylen] error for steenokkerzeel: HTTPSConnectionPool(host='www.heylenvastgoed.be', port=443): Read timed out. (read timeout=20)
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/urllib3/connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/urllib3/connectionpool.py", line 1106, in _validate_conn
+    conn.connect()
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/urllib3/connection.py", line 796, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/urllib3/connection.py", line 975, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+               ^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/urllib3/util/ssl_.py", line 433, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/urllib3/util/ssl_.py", line 477, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/ssl.py", line 517, in wrap_socket
+    return self.sslsocket_class._create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/ssl.py", line 1104, in _create
+    self.do_handshake()
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/ssl.py", line 1382, in do_handshake
+    self._sslobj.do_handshake()
+TimeoutError: _ssl.c:999: The handshake operation timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/requests/adapters.py", line 696, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/urllib3/connectionpool.py", line 842, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/urllib3/util/retry.py", line 498, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/urllib3/util/util.py", line 39, in reraise
+    raise value
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/urllib3/connectionpool.py", line 788, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/urllib3/connectionpool.py", line 488, in _make_request
+    raise new_e
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/urllib3/connectionpool.py", line 466, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=conn.timeout)
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/urllib3/connectionpool.py", line 367, in _raise_timeout
+    raise ReadTimeoutError(
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='www.heylenvastgoed.be', port=443): Read timed out. (read timeout=20)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/runner/work/HouseSearch/HouseSearch/agent/scrapers/local_agencies.py", line 29, in _scrape
+    resp = requests.get(url, headers=HEADERS, timeout=20)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/requests/api.py", line 87, in get
+    return request("get", url, params=params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/requests/api.py", line 71, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/requests/sessions.py", line 651, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/requests/sessions.py", line 805, in send
+    history = [resp for resp in gen]
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/requests/sessions.py", line 805, in <listcomp>
+    history = [resp for resp in gen]
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/requests/sessions.py", line 292, in resolve_redirects
+    resp = self.send(
+           ^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/requests/sessions.py", line 784, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/requests/adapters.py", line 742, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: HTTPSConnectionPool(host='www.heylenvastgoed.be', port=443): Read timed out. (read timeout=20)
+2026-09-15 10:44:33,326 ERROR agent.scrapers.local_agencies: [heylen] error for haacht: HTTPSConnectionPool(host='www.heylenvastgoed.be', port=443): Read timed out. (read timeout=20)
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/urllib3/connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/urllib3/connectionpool.py", line 1106, in _validate_conn
+    conn.connect()
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/urllib3/connection.py", line 796, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/urllib3/connection.py", line 975, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+               ^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/urllib3/util/ssl_.py", line 433, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/urllib3/util/ssl_.py", line 477, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/ssl.py", line 517, in wrap_socket
+    return self.sslsocket_class._create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/ssl.py", line 1104, in _create
+    self.do_handshake()
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/ssl.py", line 1382, in do_handshake
+    self._sslobj.do_handshake()
+TimeoutError: _ssl.c:999: The handshake operation timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/requests/adapters.py", line 696, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/urllib3/connectionpool.py", line 842, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/urllib3/util/retry.py", line 498, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/urllib3/util/util.py", line 39, in reraise
+    raise value
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/urllib3/connectionpool.py", line 788, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/urllib3/connectionpool.py", line 488, in _make_request
+    raise new_e
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/urllib3/connectionpool.py", line 466, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=conn.timeout)
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/urllib3/connectionpool.py", line 367, in _raise_timeout
+    raise ReadTimeoutError(
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='www.heylenvastgoed.be', port=443): Read timed out. (read timeout=20)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/runner/work/HouseSearch/HouseSearch/agent/scrapers/local_agencies.py", line 29, in _scrape
+    resp = requests.get(url, headers=HEADERS, timeout=20)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/requests/api.py", line 87, in get
+    return request("get", url, params=params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/requests/api.py", line 71, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/requests/sessions.py", line 651, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/requests/sessions.py", line 805, in send
+    history = [resp for resp in gen]
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/requests/sessions.py", line 805, in <listcomp>
+    history = [resp for resp in gen]
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/requests/sessions.py", line 292, in resolve_redirects
+    resp = self.send(
+           ^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/requests/sessions.py", line 784, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/requests/adapters.py", line 742, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: HTTPSConnectionPool(host='www.heylenvastgoed.be', port=443): Read timed out. (read timeout=20)
+2026-09-15 10:44:56,324 ERROR agent.scrapers.local_agencies: [heylen] error for zemst: HTTPSConnectionPool(host='www.heylenvastgoed.be', port=443): Read timed out. (read timeout=20)
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/urllib3/connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/urllib3/connectionpool.py", line 1106, in _validate_conn
+    conn.connect()
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/urllib3/connection.py", line 796, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/urllib3/connection.py", line 975, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+               ^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/urllib3/util/ssl_.py", line 433, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/urllib3/util/ssl_.py", line 477, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/ssl.py", line 517, in wrap_socket
+    return self.sslsocket_class._create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/ssl.py", line 1104, in _create
+    self.do_handshake()
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/ssl.py", line 1382, in do_handshake
+    self._sslobj.do_handshake()
+TimeoutError: _ssl.c:999: The handshake operation timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/requests/adapters.py", line 696, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/urllib3/connectionpool.py", line 842, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/urllib3/util/retry.py", line 498, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/urllib3/util/util.py", line 39, in reraise
+    raise value
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/urllib3/connectionpool.py", line 788, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/urllib3/connectionpool.py", line 488, in _make_request
+    raise new_e
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/urllib3/connectionpool.py", line 466, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=conn.timeout)
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/urllib3/connectionpool.py", line 367, in _raise_timeout
+    raise ReadTimeoutError(
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='www.heylenvastgoed.be', port=443): Read timed out. (read timeout=20)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/runner/work/HouseSearch/HouseSearch/agent/scrapers/local_agencies.py", line 29, in _scrape
+    resp = requests.get(url, headers=HEADERS, timeout=20)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/requests/api.py", line 87, in get
+    return request("get", url, params=params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/requests/api.py", line 71, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/requests/sessions.py", line 651, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/requests/sessions.py", line 805, in send
+    history = [resp for resp in gen]
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/requests/sessions.py", line 805, in <listcomp>
+    history = [resp for resp in gen]
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/requests/sessions.py", line 292, in resolve_redirects
+    resp = self.send(
+           ^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/requests/sessions.py", line 784, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/requests/adapters.py", line 742, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: HTTPSConnectionPool(host='www.heylenvastgoed.be', port=443): Read timed out. (read timeout=20)
+2026-09-15 10:45:18,148 ERROR agent.scrapers.local_agencies: [heylen] error for kortenberg: HTTPSConnectionPool(host='www.heylenvastgoed.be', port=443): Read timed out. (read timeout=20)
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/urllib3/connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/urllib3/connectionpool.py", line 1106, in _validate_conn
+    conn.connect()
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/urllib3/connection.py", line 796, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/urllib3/connection.py", line 975, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+               ^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/urllib3/util/ssl_.py", line 433, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/urllib3/util/ssl_.py", line 477, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/ssl.py", line 517, in wrap_socket
+    return self.sslsocket_class._create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/ssl.py", line 1104, in _create
+    self.do_handshake()
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/ssl.py", line 1382, in do_handshake
+    self._sslobj.do_handshake()
+TimeoutError: _ssl.c:999: The handshake operation timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/requests/adapters.py", line 696, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/urllib3/connectionpool.py", line 842, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/urllib3/util/retry.py", line 498, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/urllib3/util/util.py", line 39, in reraise
+    raise value
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/urllib3/connectionpool.py", line 788, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/urllib3/connectionpool.py", line 488, in _make_request
+    raise new_e
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/urllib3/connectionpool.py", line 466, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=conn.timeout)
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/urllib3/connectionpool.py", line 367, in _raise_timeout
+    raise ReadTimeoutError(
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='www.heylenvastgoed.be', port=443): Read timed out. (read timeout=20)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/runner/work/HouseSearch/HouseSearch/agent/scrapers/local_agencies.py", line 29, in _scrape
+    resp = requests.get(url, headers=HEADERS, timeout=20)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/requests/api.py", line 87, in get
+    return request("get", url, params=params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/requests/api.py", line 71, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/requests/sessions.py", line 651, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/requests/sessions.py", line 805, in send
+    history = [resp for resp in gen]
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/requests/sessions.py", line 805, in <listcomp>
+    history = [resp for resp in gen]
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/requests/sessions.py", line 292, in resolve_redirects
+    resp = self.send(
+           ^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/requests/sessions.py", line 784, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/requests/adapters.py", line 742, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: HTTPSConnectionPool(host='www.heylenvastgoed.be', port=443): Read timed out. (read timeout=20)
+2026-09-15 10:45:39,507 ERROR agent.scrapers.local_agencies: [heylen] error for mechelen: HTTPSConnectionPool(host='www.heylenvastgoed.be', port=443): Read timed out. (read timeout=20)
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/urllib3/connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/urllib3/connectionpool.py", line 1106, in _validate_conn
+    conn.connect()
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/urllib3/connection.py", line 796, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/urllib3/connection.py", line 975, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+               ^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/urllib3/util/ssl_.py", line 433, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/urllib3/util/ssl_.py", line 477, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/ssl.py", line 517, in wrap_socket
+    return self.sslsocket_class._create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/ssl.py", line 1104, in _create
+    self.do_handshake()
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/ssl.py", line 1382, in do_handshake
+    self._sslobj.do_handshake()
+TimeoutError: _ssl.c:999: The handshake operation timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/requests/adapters.py", line 696, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/urllib3/connectionpool.py", line 842, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/urllib3/util/retry.py", line 498, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/urllib3/util/util.py", line 39, in reraise
+    raise value
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/urllib3/connectionpool.py", line 788, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/urllib3/connectionpool.py", line 488, in _make_request
+    raise new_e
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/urllib3/connectionpool.py", line 466, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=conn.timeout)
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/urllib3/connectionpool.py", line 367, in _raise_timeout
+    raise ReadTimeoutError(
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='www.heylenvastgoed.be', port=443): Read timed out. (read timeout=20)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/runner/work/HouseSearch/HouseSearch/agent/scrapers/local_agencies.py", line 29, in _scrape
+    resp = requests.get(url, headers=HEADERS, timeout=20)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/requests/api.py", line 87, in get
+    return request("get", url, params=params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/requests/api.py", line 71, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/requests/sessions.py", line 651, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/requests/sessions.py", line 805, in send
+    history = [resp for resp in gen]
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/requests/sessions.py", line 805, in <listcomp>
+    history = [resp for resp in gen]
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/requests/sessions.py", line 292, in resolve_redirects
+    resp = self.send(
+           ^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/requests/sessions.py", line 784, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/requests/adapters.py", line 742, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: HTTPSConnectionPool(host='www.heylenvastgoed.be', port=443): Read timed out. (read timeout=20)
+2026-09-15 10:45:39,511 INFO agent.scrapers.local_agencies: [heylen] 0 total listings
+2026-09-15 10:45:39,511 INFO agent.scraper_base: [heylen] scraped 0 listings
+2026-09-15 10:46:01,232 INFO agent.scrapers.local_agencies: [dewaele] 756 total listings
+2026-09-15 10:46:01,234 INFO agent.scraper_base: [dewaele] scraped 756 listings
+2026-09-15 10:46:01,234 INFO __main__: 756 listings pass filters (out of 756 raw)
+2026-09-15 10:46:01,235 INFO agent.deduplication: 147 new listings out of 756 total
+2026-09-15 10:46:01,698 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:02,109 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:02,546 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:02,954 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:03,383 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:03,821 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:04,249 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:04,691 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:05,141 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:05,550 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:05,958 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:06,387 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:06,814 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:07,264 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:07,707 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:08,150 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:08,578 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:08,992 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:09,430 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:09,840 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:10,266 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:10,703 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:11,126 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:11,573 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:12,014 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:12,422 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:12,830 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:13,243 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:13,671 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:14,122 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:14,563 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:15,002 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:15,418 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:15,856 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:16,283 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:16,697 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:17,122 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:17,560 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:17,983 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:18,422 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:18,862 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:19,269 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:19,677 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:20,089 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:20,515 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:20,960 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:21,402 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:21,840 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:22,281 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:22,718 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:23,125 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:23,551 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:23,991 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:24,422 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:24,846 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:25,293 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:25,732 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:26,140 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:26,548 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:26,963 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:27,406 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:27,831 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:28,269 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:28,707 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:29,132 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:29,569 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:29,977 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:30,405 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:30,848 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:31,281 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:31,712 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:32,154 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:32,563 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:32,976 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:33,385 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:33,829 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:34,246 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:34,670 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:35,113 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:35,543 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:35,979 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:36,417 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:36,825 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:37,253 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:37,675 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:38,101 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:38,545 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:38,984 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:39,392 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:39,800 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:40,241 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:40,665 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:41,085 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:41,516 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:41,963 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:42,380 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:42,802 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:43,211 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:43,648 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:44,063 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:44,485 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:44,908 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:45,351 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:45,758 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:46,198 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:46,640 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:47,069 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:47,489 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:47,900 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:48,337 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:48,761 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:49,186 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:49,593 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:50,008 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:50,447 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:50,870 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:51,277 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:51,702 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:52,134 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:52,574 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:52,981 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:53,421 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:53,834 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:54,257 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:54,696 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:55,109 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:55,524 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:55,933 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:56,357 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:56,801 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:57,223 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:57,647 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:58,069 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:58,477 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:58,921 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:59,329 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:46:59,753 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:47:00,184 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:47:00,632 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:47:01,064 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:47:01,489 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:47:01,956 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:47:02,371 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:47:02,781 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:47:03,221 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:47:03,662 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:47:04,073 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:47:04,494 WARNING __main__: Telegram summary error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-09-15 10:47:04,498 INFO agent.deduplication: Saved 3905 seen listing IDs
+2026-09-15 10:47:04,503 INFO __main__: Reports saved: report_2026-09-15.json, report_2026-09-15.html
+2026-09-15 10:47:04,503 INFO __main__: === HouseSearch agent done: 147 new listings ===
