@@ -59838,3 +59838,609 @@ requests.exceptions.SSLError: HTTPSConnectionPool(host='www.heylen.be', port=443
 2026-11-09 14:46:28,600 INFO agent.deduplication: Saved 5365 seen listing IDs
 2026-11-09 14:46:28,618 INFO __main__: Reports saved: report_2026-11-09.json, report_2026-11-09.html
 2026-11-09 14:46:28,618 INFO __main__: === HouseSearch agent done: 172 new listings ===
+2026-11-10 13:58:56,626 INFO __main__: === HouseSearch agent starting ===
+2026-11-10 13:58:56,836 WARNING agent.scrapers.zimmo: [zimmo] HTTP 403 for boortmeerbeek
+2026-11-10 13:58:58,925 WARNING agent.scrapers.zimmo: [zimmo] HTTP 403 for hever
+2026-11-10 13:59:01,018 WARNING agent.scrapers.zimmo: [zimmo] HTTP 403 for steenokkerzeel
+2026-11-10 13:59:03,106 WARNING agent.scrapers.zimmo: [zimmo] HTTP 403 for haacht
+2026-11-10 13:59:05,187 WARNING agent.scrapers.zimmo: [zimmo] HTTP 403 for zemst
+2026-11-10 13:59:07,257 WARNING agent.scrapers.zimmo: [zimmo] HTTP 403 for kortenberg
+2026-11-10 13:59:09,364 WARNING agent.scrapers.zimmo: [zimmo] HTTP 403 for mechelen
+2026-11-10 13:59:11,365 INFO agent.scraper_base: [zimmo] scraped 0 listings
+2026-11-10 13:59:11,719 WARNING agent.scrapers.logic_immo: [logic-immo] HTTP 403 for 3190
+2026-11-10 13:59:13,915 WARNING agent.scrapers.logic_immo: [logic-immo] HTTP 403 for 3191
+2026-11-10 13:59:16,052 WARNING agent.scrapers.logic_immo: [logic-immo] HTTP 403 for 1820
+2026-11-10 13:59:18,246 WARNING agent.scrapers.logic_immo: [logic-immo] HTTP 403 for 3150
+2026-11-10 13:59:20,406 WARNING agent.scrapers.logic_immo: [logic-immo] HTTP 403 for 1980
+2026-11-10 13:59:22,597 WARNING agent.scrapers.logic_immo: [logic-immo] HTTP 403 for 3070
+2026-11-10 13:59:24,769 WARNING agent.scrapers.logic_immo: [logic-immo] HTTP 403 for 2800
+2026-11-10 13:59:26,771 INFO agent.scraper_base: [logic-immo] scraped 0 listings
+2026-11-10 13:59:46,998 ERROR agent.scrapers.local_agencies: [heylen] error for boortmeerbeek: HTTPSConnectionPool(host='www.heylen.be', port=443): Max retries exceeded with url: /nl/te-koop?type=huis&regio=boortmeerbeek&maxprijs=560000 (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.heylen.be', port=443) at 0x791133986990>, 'Connection to www.heylen.be timed out. (connect timeout=20)'))
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/urllib3/connection.py", line 239, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+TimeoutError: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/urllib3/connectionpool.py", line 793, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/urllib3/connectionpool.py", line 494, in _make_request
+    raise new_e
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/urllib3/connectionpool.py", line 470, in _make_request
+    self._validate_conn(conn)
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/urllib3/connectionpool.py", line 1125, in _validate_conn
+    conn.connect()
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/urllib3/connection.py", line 827, in connect
+    self.sock = sock = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/urllib3/connection.py", line 248, in _new_conn
+    raise ConnectTimeoutError(
+urllib3.exceptions.ConnectTimeoutError: (<HTTPSConnection(host='www.heylen.be', port=443) at 0x791133986990>, 'Connection to www.heylen.be timed out. (connect timeout=20)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/requests/adapters.py", line 696, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/urllib3/connectionpool.py", line 847, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/urllib3/util/retry.py", line 555, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='www.heylen.be', port=443): Max retries exceeded with url: /nl/te-koop?type=huis&regio=boortmeerbeek&maxprijs=560000 (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.heylen.be', port=443) at 0x791133986990>, 'Connection to www.heylen.be timed out. (connect timeout=20)'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/runner/work/HouseSearch/HouseSearch/agent/scrapers/local_agencies.py", line 29, in _scrape
+    resp = requests.get(url, headers=HEADERS, timeout=20)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/requests/api.py", line 87, in get
+    return request("get", url, params=params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/requests/api.py", line 71, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/requests/sessions.py", line 651, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/requests/sessions.py", line 784, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/requests/adapters.py", line 717, in send
+    raise ConnectTimeout(e, request=request)
+requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='www.heylen.be', port=443): Max retries exceeded with url: /nl/te-koop?type=huis&regio=boortmeerbeek&maxprijs=560000 (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.heylen.be', port=443) at 0x791133986990>, 'Connection to www.heylen.be timed out. (connect timeout=20)'))
+2026-11-10 14:00:07,160 ERROR agent.scrapers.local_agencies: [heylen] error for steenokkerzeel: HTTPSConnectionPool(host='www.heylen.be', port=443): Max retries exceeded with url: /nl/te-koop?type=huis&regio=steenokkerzeel&maxprijs=560000 (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.heylen.be', port=443) at 0x791133a05210>, 'Connection to www.heylen.be timed out. (connect timeout=20)'))
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/urllib3/connection.py", line 239, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+TimeoutError: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/urllib3/connectionpool.py", line 793, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/urllib3/connectionpool.py", line 494, in _make_request
+    raise new_e
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/urllib3/connectionpool.py", line 470, in _make_request
+    self._validate_conn(conn)
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/urllib3/connectionpool.py", line 1125, in _validate_conn
+    conn.connect()
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/urllib3/connection.py", line 827, in connect
+    self.sock = sock = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/urllib3/connection.py", line 248, in _new_conn
+    raise ConnectTimeoutError(
+urllib3.exceptions.ConnectTimeoutError: (<HTTPSConnection(host='www.heylen.be', port=443) at 0x791133a05210>, 'Connection to www.heylen.be timed out. (connect timeout=20)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/requests/adapters.py", line 696, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/urllib3/connectionpool.py", line 847, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/urllib3/util/retry.py", line 555, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='www.heylen.be', port=443): Max retries exceeded with url: /nl/te-koop?type=huis&regio=steenokkerzeel&maxprijs=560000 (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.heylen.be', port=443) at 0x791133a05210>, 'Connection to www.heylen.be timed out. (connect timeout=20)'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/runner/work/HouseSearch/HouseSearch/agent/scrapers/local_agencies.py", line 29, in _scrape
+    resp = requests.get(url, headers=HEADERS, timeout=20)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/requests/api.py", line 87, in get
+    return request("get", url, params=params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/requests/api.py", line 71, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/requests/sessions.py", line 651, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/requests/sessions.py", line 784, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/requests/adapters.py", line 717, in send
+    raise ConnectTimeout(e, request=request)
+requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='www.heylen.be', port=443): Max retries exceeded with url: /nl/te-koop?type=huis&regio=steenokkerzeel&maxprijs=560000 (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.heylen.be', port=443) at 0x791133a05210>, 'Connection to www.heylen.be timed out. (connect timeout=20)'))
+2026-11-10 14:00:27,409 ERROR agent.scrapers.local_agencies: [heylen] error for haacht: HTTPSConnectionPool(host='www.heylen.be', port=443): Max retries exceeded with url: /nl/te-koop?type=huis&regio=haacht&maxprijs=560000 (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.heylen.be', port=443) at 0x791133a07110>, 'Connection to www.heylen.be timed out. (connect timeout=20)'))
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/urllib3/connection.py", line 239, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+TimeoutError: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/urllib3/connectionpool.py", line 793, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/urllib3/connectionpool.py", line 494, in _make_request
+    raise new_e
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/urllib3/connectionpool.py", line 470, in _make_request
+    self._validate_conn(conn)
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/urllib3/connectionpool.py", line 1125, in _validate_conn
+    conn.connect()
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/urllib3/connection.py", line 827, in connect
+    self.sock = sock = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/urllib3/connection.py", line 248, in _new_conn
+    raise ConnectTimeoutError(
+urllib3.exceptions.ConnectTimeoutError: (<HTTPSConnection(host='www.heylen.be', port=443) at 0x791133a07110>, 'Connection to www.heylen.be timed out. (connect timeout=20)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/requests/adapters.py", line 696, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/urllib3/connectionpool.py", line 847, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/urllib3/util/retry.py", line 555, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='www.heylen.be', port=443): Max retries exceeded with url: /nl/te-koop?type=huis&regio=haacht&maxprijs=560000 (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.heylen.be', port=443) at 0x791133a07110>, 'Connection to www.heylen.be timed out. (connect timeout=20)'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/runner/work/HouseSearch/HouseSearch/agent/scrapers/local_agencies.py", line 29, in _scrape
+    resp = requests.get(url, headers=HEADERS, timeout=20)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/requests/api.py", line 87, in get
+    return request("get", url, params=params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/requests/api.py", line 71, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/requests/sessions.py", line 651, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/requests/sessions.py", line 784, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/requests/adapters.py", line 717, in send
+    raise ConnectTimeout(e, request=request)
+requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='www.heylen.be', port=443): Max retries exceeded with url: /nl/te-koop?type=huis&regio=haacht&maxprijs=560000 (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.heylen.be', port=443) at 0x791133a07110>, 'Connection to www.heylen.be timed out. (connect timeout=20)'))
+2026-11-10 14:00:47,672 ERROR agent.scrapers.local_agencies: [heylen] error for zemst: HTTPSConnectionPool(host='www.heylen.be', port=443): Max retries exceeded with url: /nl/te-koop?type=huis&regio=zemst&maxprijs=560000 (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.heylen.be', port=443) at 0x791133a0d0d0>, 'Connection to www.heylen.be timed out. (connect timeout=20)'))
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/urllib3/connection.py", line 239, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+TimeoutError: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/urllib3/connectionpool.py", line 793, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/urllib3/connectionpool.py", line 494, in _make_request
+    raise new_e
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/urllib3/connectionpool.py", line 470, in _make_request
+    self._validate_conn(conn)
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/urllib3/connectionpool.py", line 1125, in _validate_conn
+    conn.connect()
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/urllib3/connection.py", line 827, in connect
+    self.sock = sock = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/urllib3/connection.py", line 248, in _new_conn
+    raise ConnectTimeoutError(
+urllib3.exceptions.ConnectTimeoutError: (<HTTPSConnection(host='www.heylen.be', port=443) at 0x791133a0d0d0>, 'Connection to www.heylen.be timed out. (connect timeout=20)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/requests/adapters.py", line 696, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/urllib3/connectionpool.py", line 847, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/urllib3/util/retry.py", line 555, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='www.heylen.be', port=443): Max retries exceeded with url: /nl/te-koop?type=huis&regio=zemst&maxprijs=560000 (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.heylen.be', port=443) at 0x791133a0d0d0>, 'Connection to www.heylen.be timed out. (connect timeout=20)'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/runner/work/HouseSearch/HouseSearch/agent/scrapers/local_agencies.py", line 29, in _scrape
+    resp = requests.get(url, headers=HEADERS, timeout=20)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/requests/api.py", line 87, in get
+    return request("get", url, params=params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/requests/api.py", line 71, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/requests/sessions.py", line 651, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/requests/sessions.py", line 784, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/requests/adapters.py", line 717, in send
+    raise ConnectTimeout(e, request=request)
+requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='www.heylen.be', port=443): Max retries exceeded with url: /nl/te-koop?type=huis&regio=zemst&maxprijs=560000 (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.heylen.be', port=443) at 0x791133a0d0d0>, 'Connection to www.heylen.be timed out. (connect timeout=20)'))
+2026-11-10 14:01:07,929 ERROR agent.scrapers.local_agencies: [heylen] error for kortenberg: HTTPSConnectionPool(host='www.heylen.be', port=443): Max retries exceeded with url: /nl/te-koop?type=huis&regio=kortenberg&maxprijs=560000 (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.heylen.be', port=443) at 0x791133a0f050>, 'Connection to www.heylen.be timed out. (connect timeout=20)'))
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/urllib3/connection.py", line 239, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+TimeoutError: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/urllib3/connectionpool.py", line 793, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/urllib3/connectionpool.py", line 494, in _make_request
+    raise new_e
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/urllib3/connectionpool.py", line 470, in _make_request
+    self._validate_conn(conn)
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/urllib3/connectionpool.py", line 1125, in _validate_conn
+    conn.connect()
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/urllib3/connection.py", line 827, in connect
+    self.sock = sock = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/urllib3/connection.py", line 248, in _new_conn
+    raise ConnectTimeoutError(
+urllib3.exceptions.ConnectTimeoutError: (<HTTPSConnection(host='www.heylen.be', port=443) at 0x791133a0f050>, 'Connection to www.heylen.be timed out. (connect timeout=20)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/requests/adapters.py", line 696, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/urllib3/connectionpool.py", line 847, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/urllib3/util/retry.py", line 555, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='www.heylen.be', port=443): Max retries exceeded with url: /nl/te-koop?type=huis&regio=kortenberg&maxprijs=560000 (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.heylen.be', port=443) at 0x791133a0f050>, 'Connection to www.heylen.be timed out. (connect timeout=20)'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/runner/work/HouseSearch/HouseSearch/agent/scrapers/local_agencies.py", line 29, in _scrape
+    resp = requests.get(url, headers=HEADERS, timeout=20)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/requests/api.py", line 87, in get
+    return request("get", url, params=params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/requests/api.py", line 71, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/requests/sessions.py", line 651, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/requests/sessions.py", line 784, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/requests/adapters.py", line 717, in send
+    raise ConnectTimeout(e, request=request)
+requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='www.heylen.be', port=443): Max retries exceeded with url: /nl/te-koop?type=huis&regio=kortenberg&maxprijs=560000 (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.heylen.be', port=443) at 0x791133a0f050>, 'Connection to www.heylen.be timed out. (connect timeout=20)'))
+2026-11-10 14:01:28,252 ERROR agent.scrapers.local_agencies: [heylen] error for mechelen: HTTPSConnectionPool(host='www.heylen.be', port=443): Max retries exceeded with url: /nl/te-koop?type=huis&regio=mechelen&maxprijs=560000 (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.heylen.be', port=443) at 0x791133a07210>, 'Connection to www.heylen.be timed out. (connect timeout=20)'))
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/urllib3/connection.py", line 239, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+TimeoutError: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/urllib3/connectionpool.py", line 793, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/urllib3/connectionpool.py", line 494, in _make_request
+    raise new_e
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/urllib3/connectionpool.py", line 470, in _make_request
+    self._validate_conn(conn)
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/urllib3/connectionpool.py", line 1125, in _validate_conn
+    conn.connect()
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/urllib3/connection.py", line 827, in connect
+    self.sock = sock = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/urllib3/connection.py", line 248, in _new_conn
+    raise ConnectTimeoutError(
+urllib3.exceptions.ConnectTimeoutError: (<HTTPSConnection(host='www.heylen.be', port=443) at 0x791133a07210>, 'Connection to www.heylen.be timed out. (connect timeout=20)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/requests/adapters.py", line 696, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/urllib3/connectionpool.py", line 847, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/urllib3/util/retry.py", line 555, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='www.heylen.be', port=443): Max retries exceeded with url: /nl/te-koop?type=huis&regio=mechelen&maxprijs=560000 (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.heylen.be', port=443) at 0x791133a07210>, 'Connection to www.heylen.be timed out. (connect timeout=20)'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/runner/work/HouseSearch/HouseSearch/agent/scrapers/local_agencies.py", line 29, in _scrape
+    resp = requests.get(url, headers=HEADERS, timeout=20)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/requests/api.py", line 87, in get
+    return request("get", url, params=params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/requests/api.py", line 71, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/requests/sessions.py", line 651, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/requests/sessions.py", line 784, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/requests/adapters.py", line 717, in send
+    raise ConnectTimeout(e, request=request)
+requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='www.heylen.be', port=443): Max retries exceeded with url: /nl/te-koop?type=huis&regio=mechelen&maxprijs=560000 (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.heylen.be', port=443) at 0x791133a07210>, 'Connection to www.heylen.be timed out. (connect timeout=20)'))
+2026-11-10 14:01:28,254 INFO agent.scrapers.local_agencies: [heylen] 0 total listings
+2026-11-10 14:01:28,254 INFO agent.scraper_base: [heylen] scraped 0 listings
+2026-11-10 14:01:58,535 INFO agent.scrapers.local_agencies: [dewaele] 770 total listings
+2026-11-10 14:01:58,536 INFO agent.scraper_base: [dewaele] scraped 770 listings
+2026-11-10 14:01:58,537 INFO __main__: 770 listings pass filters (out of 770 raw)
+2026-11-10 14:01:58,538 INFO agent.deduplication: 189 new listings out of 770 total
+2026-11-10 14:01:59,008 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:01:59,448 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:01:59,803 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:00,134 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:00,480 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:00,929 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:01,258 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:01,704 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:02,040 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:02,380 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:02,717 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:03,048 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:03,389 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:03,724 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:04,055 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:04,404 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:04,753 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:05,099 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:05,452 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:05,907 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:06,350 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:06,784 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:07,116 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:07,461 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:07,890 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:08,231 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:09,749 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:10,085 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:10,426 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:10,763 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:11,095 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:11,431 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:11,767 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:12,098 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:12,446 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:12,876 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:13,320 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:13,741 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:14,089 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:14,435 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:14,880 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:15,207 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:15,550 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:15,906 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:16,257 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:16,685 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:17,020 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:17,359 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:17,696 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:18,027 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:18,366 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:18,701 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:19,033 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:19,383 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:19,768 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:20,140 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:20,474 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:20,821 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:21,188 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:21,617 ERROR __main__: Telegram send failed: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2026-11-10 14:02:21,944 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:22,291 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:22,625 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:22,963 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:23,314 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:23,671 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:24,005 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:24,345 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:24,684 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:25,015 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:25,356 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:25,693 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:26,024 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:26,372 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:26,708 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:27,048 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:27,412 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:27,761 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:28,116 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:28,465 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:28,793 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:29,143 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:29,478 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:29,818 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:30,167 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:30,522 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:30,857 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:31,196 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:31,535 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:31,865 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:32,212 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:32,549 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:32,879 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:33,228 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:33,659 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:33,998 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:34,367 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:34,713 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:35,064 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:35,414 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:35,742 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:36,087 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:36,421 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:36,808 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:37,167 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:37,594 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:38,161 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:38,500 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:38,837 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:39,169 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:39,504 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:39,840 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:40,170 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:40,537 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:40,884 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:41,323 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:41,721 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:42,066 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:42,415 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:42,744 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:43,094 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:43,430 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:43,839 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:44,204 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:44,649 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:44,990 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:45,329 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:45,666 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:45,998 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:46,338 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:46,676 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:47,007 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:47,351 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:47,700 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:48,047 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:52,738 ERROR __main__: Telegram send failed: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2026-11-10 14:02:53,164 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:53,509 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:53,939 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:54,279 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:54,618 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:54,950 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:55,287 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:55,622 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:55,954 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:56,317 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:56,666 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:57,000 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:57,340 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:57,781 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:58,117 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:58,456 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:58,797 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:59,174 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:59,515 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:02:59,866 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:03:00,213 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:03:00,560 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:03:01,021 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:03:01,362 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:03:01,699 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:03:02,031 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:03:02,373 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:03:02,707 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:03:03,048 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:03:03,396 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:03:03,774 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:03:04,108 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:03:04,449 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:03:04,899 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:03:05,238 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:03:05,571 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:03:05,919 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:03:06,274 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:03:06,617 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:03:06,955 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:03:07,293 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:03:07,636 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:03:08,076 ERROR __main__: Telegram send failed: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2026-11-10 14:03:08,417 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:03:08,755 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:03:09,086 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:03:09,433 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:03:09,764 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:03:10,109 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:03:10,455 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:03:10,813 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:03:11,148 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:03:11,491 WARNING __main__: Telegram error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:03:11,948 WARNING __main__: Telegram summary error: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-11-10 14:03:11,953 INFO agent.deduplication: Saved 5392 seen listing IDs
+2026-11-10 14:03:11,960 INFO __main__: Reports saved: report_2026-11-10.json, report_2026-11-10.html
+2026-11-10 14:03:11,960 INFO __main__: === HouseSearch agent done: 189 new listings ===
